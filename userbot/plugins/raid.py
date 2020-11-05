@@ -11,7 +11,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 async def movie_search(event):
     chat = await event.get_input_chat()
     if (chat_id != -1001301592059):
-        """get movie from channel"""
+       { """get movie from channel"""
 
     try:
 
@@ -28,4 +28,5 @@ async def movie_search(event):
       await event.client.send_message(event.chat_id, msg)
 
       await event.delete()
-   
+   }
+else
