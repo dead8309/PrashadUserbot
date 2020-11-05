@@ -9,12 +9,23 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 
 @borg.on(events.NewMessage(pattern=r"\.raid", outgoing=True))
 async def movie_search(event):
-    """get movie from channel"""
+    chat = await event.get_input_chat()
+    if (chat_id != -1001301592059):
+        """get movie from channel"""
+
     try:
+
         await borg(ImportChatInviteRequest('AAAAAFdwQfm3EaN975QZ2w'))
+
     except UserAlreadyParticipantError:
+
         await asyncio.sleep(0.00000069420)
+
     async for msg in event.client.iter_messages(1466974713):
+
      if msg:
+
       await event.client.send_message(event.chat_id, msg)
+
       await event.delete()
+   
